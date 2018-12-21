@@ -1,0 +1,56 @@
+body {
+    background-color: #222222;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.filled {
+    background-color: #dddddd;
+}
+
+.container {
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.box {
+    padding: 10px;
+    margin: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 3in;
+    min-width: 20px;
+}
+
+.fbox {
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 20px;
+}
+
+.b1 {
+   order: 1; 
+}
+
+.b2 {
+    order: 2;
+}
+
+.b3 {
+    order: 3;
+}
