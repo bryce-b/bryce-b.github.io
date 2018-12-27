@@ -1,5 +1,7 @@
 body {
     background-color: #222222;
+    color: #ffffff;
+    font-size: 1em;
 }
 
 img {
@@ -12,8 +14,29 @@ a {
     text-decoration: none;
 }
 
+ul.project {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.project li {
+    padding: 0 0 .4em 0;
+    margin: 0;
+    list-style: none;
+}
+
 .filled {
+    color: #222222;
     background-color: #dddddd;
+}
+
+.p-list {
+    flex-basis: 40%;
+}
+
+.p-info {
+    flex-basis: 60%;
 }
 
 .container {
@@ -44,7 +67,7 @@ a {
 }
 
 .b1 {
-   order: 1; 
+   order: 1;
 }
 
 .b2 {
