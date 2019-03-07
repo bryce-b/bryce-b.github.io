@@ -1,0 +1,5 @@
+move the main info, projects, and certs to
+the side and have a section for reach of them
+
+project sections:
+use the theme from the website to spice it up
