@@ -16,6 +16,7 @@
     <!--TODO: include the img type( png etc ) and add the icon to media folder-->
     <link rel="icon" type="image/*" href="media/" sizes="any" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="javascript/main.js"></script>
 
     <title>Bryce B portfolio</title>
@@ -23,31 +24,52 @@
 </head>
 
 <body>
-    <section id="main">
-        <div class="flex-container main">
-            <div class="main-text">Hello I&#39;m Bryce</div>
+    <div class="main-section">
+        <div class="main-text">
+            Hello I&#39;m Bryce&#46;<br />
+            <ul class="main">
+                <li>Object 1</li>
+                <li>Object 2</li>
+                <li>Object 3</li>
+            </ul>
         </div>
-    </section>
+    </div>
+    
+    <div id="particles-js"></div>
+    <script src="javascript/particles.js"></script>
+    <script src="javascript/app.js"></script>
+    
+    <nav>
+        <!--make a button for us to click-->
+        <button class="hamburger">&#9776;</button>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#main-info">Main Info</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certs">Certifications</a></li>
+        </ul>
+
+    </nav>
     
     <div class="container">
         <div class="flex-container">
             <div class="box b1 filled">
-                <h1>Main info</h1>
+                <h1 id="main-info">Main info</h1>
                 <p></p>
             </div>
 
             <div class="box b2 filled">
-                <h1>Projects</h1>
+                <h1 id="projects">Projects</h1>
                 <ul class="projects">
                     <li><a href="#3rdgrade">3rd grade educational website&#46;</a></li>
-                    <li><a href="comp">Computer tear down&#46;</a></li>
-                    <li><a href="game">Middle school game&#46;</a></li>
+                    <li><a href="#comp">Computer tear down&#46;</a></li>
+                    <li><a href="#game">Middle school game&#46;</a></li>
                 </ul>
 
             </div>
 
             <div class="box b3 filled">
-                <h1>Certifications earned</h1>
+                <h1 id="certs">Certifications earned</h1>
             </div>
 
         </div>

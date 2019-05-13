@@ -19,6 +19,48 @@ a:hover {
     text-decoration: underline;
 }
 
+nav {
+    font-family: verdana, sans-serif;
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 1em 0 0 1em;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #111111;
+}
+
+ul.nav {
+    padding: 0;
+    margin: 0 1em 0 1em;
+    list-style-type: none;
+    display: block;
+}
+
+ul.nav li {
+    padding: 0 0 .5em 0;
+}
+
+ul.nav li a {
+    color: #dddddd;
+}
+
+ul.main {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+ul.main li {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
 ul.projects {
     margin: 0;
 }
@@ -72,9 +114,30 @@ img.projects {
 
 .b3 { order: 3; }
 
+.main-section {
+    position: absolute;
+    height: 100vh;
+    width: 99%;
+}
+
 .main-text {
-	-webkit-animation: main-text 0.7s linear both;
-	        animation: main-text 0.7s linear both;
+    position: relative;
+    -webkit-animation: main-text 0.7s linear both;
+    animation: main-text 0.7s linear both;
+    top: 50%;
+    transform: translateY( -50% );
+    text-align: center;
+}
+
+.hamburger {
+    background: none;
+    line-height: 1.5em;
+    padding: 0 .5em 0 .5em;
+    color: #dddddd;
+    border: 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: none;
 }
 
 @-webkit-keyframes main-text {
@@ -104,16 +167,16 @@ img.projects {
 }
 
 .animate-selected {
-	-webkit-animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
-	        animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+    -webkit-animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+    animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
 }
 
 @-webkit-keyframes animate-selected {
-  0% { background: #19dcea; }
-  100% { background: #b22cff; }
+    0% { background: #19dcea; }
+    100% { background: #b22cff; }
 }
 
 @keyframes animate-selected {
-  0% { background: #19dcea; }
-  100% { background: #b22cff; }
+    0% { background: #19dcea; }
+    100% { background: #b22cff; }
 }
