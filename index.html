@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -12,6 +13,8 @@
     <meta name="keywords" content="Bryce B, Bryce B portfolio, Bryce B website" />
 
     <link rel="stylesheet" href="css/main.css" />
+    <!--Moved to seperate file to remove clutter-->
+    <link rel="stylesheet" href="css/animations.css" />
 
     <!--TODO: include the img type( png etc ) and add the icon to media folder-->
     <link rel="icon" type="image/*" href="media/" sizes="any" />
@@ -23,7 +26,7 @@
 
 </head>
 
-<body>    
+<body>
     <div id="particles-js">
         <div class="main-section">
             <div class="main-text">
@@ -38,7 +41,7 @@
     </div>
     <script src="javascript/particles.js"></script>
     <script src="javascript/app.js"></script>
-    
+
     <nav>
         <!--make a button for us to click-->
         <button class="hamburger">&#9776;</button>
@@ -48,14 +51,44 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certs">Certifications</a></li>
         </ul>
-
     </nav>
-    
+
     <div class="container">
         <div id="top-info" class="flex-container">
-            <div class="box b1 filled">
+            <!--IDEA: use grid move main info project and certs to left
+                and have projects be its own slide show on right-->
+
+            <div class="grid">
+                <div class="projects-info-grid filled">
+                    <div class="flex-container">
+                        <div class="fbox b1"><h5 id="projects">Main Projects</h1></div>
+                        <div class="fbox b2">Projects&#58;</div>
+                    </div>
+                </div>
+                
+                <div class="main-info-grid filled">
+                    <h1 id="main-info">Main info</h1>
+                    <p>I am Bryce&#44; I am currently a High School student who also attends
+                        a tech center for web and game development&#46; All of my projects
+                        listed here are most likely projects that I&#39;ve worked on for this
+                        class&#46;</p>
+                </div>
+                
+                <div class="certs-info-grid filled">Testing</div>
+
+                <div class="project-preview-grid filled">Testing 123</div>
+                </div>
+
+            <!--<div class="box b1 filled">
                 <h1 id="main-info">Main info</h1>
-                <p></p>
+                <p>I am Bryce&#44; I am currently a High School student who also attends
+                    a tech center for web and game development&#46; All of my projects
+                    listed here are most likely projects that I&#39;ve worked on for this
+                    class&#46;</p>
+                
+                <p>My current interests consist of playing games&#44; programming&#44;
+                    reverse engineering &#40;malware&#44; crackmes&#44; etc&#41;&#44;
+                    and CTF &#40;<a href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security">Capture the Flag</a>&#41;&#46;</p>
             </div>
 
             <div class="box b2 filled">
@@ -70,16 +103,15 @@
 
             <div class="box b3 filled">
                 <h1 id="certs">Certifications earned</h1>
-            </div>
+            </div>-->
 
         </div>
-        
-        <div class="flex-container">
+
+        <!--TODO: upload hard copies to the website to ensure they dont get lost-->
+        <!--<div class="flex-container">
             <div id="3rdgrade" class="box b1 filled">
                 <img class="projects" src="media/3.png" alt="a picture of the galaxy from my website"/>
-                <h2><a href="https://www.kuzmaclass.org/sandbox/bbroom/solar/index.htm">3rd Grade Educational Website</a></h2>
-                
-                
+                <h2><a href="#">3rd Grade Educational Website</a></h2>
             </div>
             
         </div>
@@ -87,7 +119,7 @@
          <div class="flex-container">
             <div id="comp" class="box b1 filled">
                 <img class="projects" src="media/3.png" alt="a picture of the galaxy from my website"/>
-                <h2><a href="https://www.kuzmaclass.org/sandbox2019/BryceBroom/computerrepair/index.html">Computer Tear Down</a></h2>
+                <h2><a href="#">Computer Tear Down</a></h2>
                 
                 
             </div>
@@ -97,15 +129,28 @@
         <div class="flex-container">
             <div id="game" class="box b1 filled">
                 <img class="projects" src="media/3.png" alt="a picture of the galaxy from my website"/>
-                <h2><a href="https://www.kuzmaclass.org/sandbox2019/BryceBroom/2ndtricapstone/index.html">Les Escargots Niors</a></h2>
+                <h2><a href="#">Les Escargots Niors</a></h2>
                 
                 
             </div>
             
-        </div>
-        
+        </div>-->
+
         <footer>
-        
+            <div class="flex-container">
+                <div class="fbox b1">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+                </div>
+
+                <div class="fbox b2">
+                    Last Updated: 5/14/2019
+                </div>
+
+                <!--TODO: include email-->
+                <div class="fbox b3">
+                    <a href="mailto:">Send me an email</a>
+                </div>
+            </div>
         </footer>
 
     </div>

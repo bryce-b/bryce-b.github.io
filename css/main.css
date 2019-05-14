@@ -4,11 +4,7 @@ body {
     font-size: 1em;
 }
 
-img {
-    display: block;
-    margin: auto;
-    width: 100%;
-}
+p { font-size: 1.2em; }
 
 a {
     color: #008d72;
@@ -16,6 +12,15 @@ a {
 }
 
 a:hover { text-decoration: underline; }
+
+footer {
+    margin: 1em 0 0 0;
+    background: #111111;
+    border: 1px solid #a333a3;
+    margin: 3px;
+}
+
+footer a { color: #ffffff; }
 
 nav {
     font-family: verdana, sans-serif;
@@ -113,57 +118,29 @@ img.projects {
     outline: none;
 }
 
-.main-text {
-    max-width: 20%;
-    padding: 5px;
-    position: relative;
-    -webkit-animation: main-text 0.7s linear both;
-    animation: main-text 0.7s linear both;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    background: #111111;
-    border: 1px solid #a333a3;
+.grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto auto;
 }
 
-@-webkit-keyframes main-text {
-  0% {
-    -webkit-filter: blur(14px);
-            filter: blur(14px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+.projects-info-grid {
+    grid-row: 1;
+    grid-column: 1;
 }
 
-@keyframes main-text {
-  0% {
-    -webkit-filter: blur(14px);
-            filter: blur(14px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+.project-preview-grid {
+    grid-row: span 3;
+    grid-column: 2;
 }
 
-.animate-selected {
-    -webkit-animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
-    animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+.main-info-grid {
+    grid-row: 2;
+    grid-column: 1;
 }
 
-@-webkit-keyframes animate-selected {
-    0% { background: #19dcea; }
-    100% { background: #b22cff; }
+.certs-info-grid {
+    grid-row: 3;
+    grid-column: 1;
 }
 
-@keyframes animate-selected {
-    0% { background: #19dcea; }
-    100% { background: #b22cff; }
-}

@@ -1,0 +1,55 @@
+.main-text {
+    font-size: 1.75em;
+    max-width: 20%;
+    padding: 5px;
+    position: relative;
+    -webkit-animation: main-text 0.7s linear both;
+    animation: main-text 0.7s linear both;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    background: #111111;
+    border: 1px solid #a333a3;
+}
+
+@-webkit-keyframes main-text {
+  0% {
+    -webkit-filter: blur(14px);
+            filter: blur(14px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes main-text {
+  0% {
+    -webkit-filter: blur(14px);
+            filter: blur(14px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.animate-selected {
+    -webkit-animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+    animation: animate-selected 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+}
+
+@-webkit-keyframes animate-selected {
+    0% { background: #19dcea; }
+    100% { background: #b22cff; }
+}
+
+@keyframes animate-selected {
+    0% { background: #19dcea; }
+    100% { background: #b22cff; }
+}
