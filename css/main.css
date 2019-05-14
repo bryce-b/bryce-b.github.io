@@ -10,20 +10,12 @@ img {
     width: 100%;
 }
 
-img.main {
-    display: inline;
-    max-height: 100px;
-    max-width: 100px;
-}
-
 a {
     color: #008d72;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
 
 nav {
     font-family: verdana, sans-serif;
@@ -40,41 +32,27 @@ nav {
     background-color: #111111;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
 ul.nav {
-    padding: 0;
-    margin: 0 1em 0 1em;
+    margin: 0;
     list-style-type: none;
-    display: block;
-}
-
-ul.nav li {
-    padding: 0 0 .5em 0;
-}
-
-ul.nav li a {
-    color: #dddddd;
-}
-
-ul.main {
-    margin: 0;
-    padding: 0;
     display: inline;
 }
 
-ul.main li {
-    padding: 0;
-    margin: 0;
-    display: inline;
-}
-
-ul.projects {
-    margin: 0;
-}
-
-ul.projects li {
-    padding: 0 0 .4em 0;
-    margin: 0;
-}
+ul.nav li { margin: 0 1em 0 0; display: inline; }
+ul.nav li a { color: #dddddd; }
+ul.main li { display: inline; }
+ul.main li a { color: #42fafa; }
+ul.projects li { padding: 0 0 .4em 0; }
 
 img.projects {
     max-height: 3in;
@@ -115,24 +93,13 @@ img.projects {
 }
 
 .b1 { order: 1; }
-
 .b2 { order: 2; }
-
 .b3 { order: 3; }
 
 .main-section {
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 99%;
-}
-
-.main-text {
-    position: relative;
-    -webkit-animation: main-text 0.7s linear both;
-    animation: main-text 0.7s linear both;
-    top: 50%;
-    transform: translateY( -50% );
-    text-align: center;
 }
 
 .hamburger {
@@ -144,6 +111,20 @@ img.projects {
     font-size: 1.5em;
     cursor: pointer;
     outline: none;
+}
+
+.main-text {
+    max-width: 20%;
+    padding: 5px;
+    position: relative;
+    -webkit-animation: main-text 0.7s linear both;
+    animation: main-text 0.7s linear both;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    background: #111111;
+    border: 1px solid #a333a3;
 }
 
 @-webkit-keyframes main-text {

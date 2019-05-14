@@ -2,21 +2,23 @@ $( document ).ready( function( ) {
     "use strict"
     
     var $nav = $( "ul.nav" ),
-        $hamburger = $( ".hamburger" );
+        $hamburger = $( ".hamburger" ),
+        $particle = $( ".particles-js" );
     
     $nav.hide( );
     $hamburger.hide( );
+    
+    $( ".main-section" ).css( "max-height", $particle.height( ) );
     
     $( window ).scroll( function( ) {
         var $scroll = $( window ).scrollTop( ),
             $height = $( window ).height( );
         
         if( $scroll > $height / 2 ) {
-            $( ".particles-js" ).hide( );
             $hamburger.show( );
         } else {
-            $( ".particles-js" ).show( );
             $hamburger.hide( );
+            $nav.hide( );
         }
     } );
     
