@@ -128,21 +128,27 @@ img.projects {
 .projects-info-grid {
     grid-row: 1;
     grid-column: 1;
+    margin: 10px;
 }
 
 .project-preview-grid {
     grid-row: span 3;
     grid-column: 2;
+    margin: 10px 0 10px 0;
 }
 
 .main-info-grid {
     grid-row: 2;
     grid-column: 1;
+    margin: 10px;
+    padding: 10px;
 }
 
 .certs-info-grid {
     grid-row: 3;
     grid-column: 1;
+    margin: 10px;
+    padding: 10px;
 }
 
 canvas#main-canvas {
