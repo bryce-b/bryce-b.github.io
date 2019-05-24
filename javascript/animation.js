@@ -2,6 +2,8 @@ class Particle {
     constructor( x, y ) {
         this.m_x = x;
         this.m_y = y;
+        this.m_x_speed = ( Math.random( ) * ( 1.50 + 1.50 ) - 1.50 );
+        this.m_y_speed = ( Math.random( ) * ( 1.50 + 1.50 ) - 1.50 );
     }
     
     Draw( ) {
@@ -16,14 +18,18 @@ class Particle {
     Link( other ) {
         context.lineWidth = 1.3;
         context.beginPath( );
-        context.moveTo( m_x, m_y );
+        context.moveTo( this.m_x, this.m_y );
         context.lineTo( other.m_x, other.m_y );
         context.stroke( );
         context.closePath( );
     }
+    
+    Distance( other ) {
+        
+    }
 }
 
-let kPi = 3.14159265358979323846, kDegToRad = kPi / 180.0, kRadToDeg = 180.0 / kPi;
+const kPi = 3.14159265358979323846, kDegToRad = kPi / 180.0, kRadToDeg = 180.0 / kPi;
     
 rad = function( degrees ) { return degrees * kDegToRad; },
 deg = function( radians ) { return radians * kRadToDeg; }
@@ -36,26 +42,42 @@ function CreateParticle( ) {
     var item = { };
     
     for( var i = 0; i < max_particles; ++i ) {
-        particles.push( new Particle( Math.random( ) * canvas.width, Math.random( ) * canvas.height / i ) );
+        particles.push( new Particle( Math.random( ) * canvas.width, Math.random( ) * canvas.height ) );
     }
 }
 
 function UpdatePosition( ) {
-    var item = { };
+    var item = { }, distance_x = { }, distance_y = { }, distance = { };
 
     for( var i = 0; i < max_particles; ++i ) {
         item = particles[ i ];
-        item.m_x += .020;
-        item.m_y += .020;
+        // random number
+        item.m_x += item.m_x_speed;
+        item.m_y += item.m_y_speed;
+        /*for( var k = i + 1; k < max_particles; ++i ) {
+            item2 = particles[ k ];
+            distance_x = item.m_x - item2.m_x;
+            distance_y = item.m_y - item2.m_y;
+            distance = Math.sqrt( distance_x * distance_x + distance_y * distance_y );
+            if( distance > 150 ) continue;
+            
+            item.Link( item2 );
+        }*/
     }
 }
-
-function DrawParticles( ) {
-    context.clearRect( 0, 0, canvas.width, canvas.height );
-    UpdatePosition( );
+function DrawParticles() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    UpdatePosition();
+        
     for( var i = 0; i < max_particles; ++i ) {
-        current_particle = particles[ i ];
-        current_particle.Draw( );
+        current_particle = particles[i];
+        if( current_particle.m_x > canvas.width || current_particle.m_x < 0 )
+            current_particle.m_x_speed = -current_particle.m_x_speed;
+        
+        if( current_particle.m_y > canvas.height || current_particle.m_y < 0 )
+            current_particle.m_y_speed = -current_particle.m_y_speed;
+            
+        current_particle.Draw();
     }
 }
 
@@ -91,6 +113,7 @@ function Render( ) {
 
     CreateParticle( );
     DrawParticles( );
+    window.requestAnimationFrame( Render );
 }
 
 

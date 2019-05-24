@@ -102,9 +102,11 @@ img.projects {
 .b3 { order: 3; }
 
 .main-section {
+    top: 0;
+    left: 0;
     position: absolute;
-    height: 100%;
-    width: 99%;
+    height: 99.6vh;
+    width: 98.5vw;
 }
 
 .hamburger {
