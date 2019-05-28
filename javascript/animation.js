@@ -1,13 +1,23 @@
+const kPi = 3.14159265358979323846, particle_color = "#f242f2", line_color = "#dc34f2",
+      max_particles = 80;
+
+var canvas = { }, context = { }, particles = [ ];
+
+// particle class
 class Particle {
     constructor( x, y ) {
         this.m_x = x;
         this.m_y = y;
+        // assign a random speed to the particles
         this.m_x_speed = ( Math.random( ) * ( 1.50 + 1.50 ) - 1.50 );
         this.m_y_speed = ( Math.random( ) * ( 1.50 + 1.50 ) - 1.50 );
     }
     
+    // draw function for the particles
     Draw( ) {
-        let radius = 3;
+        this.m_x += this.m_x_speed;
+        this.m_y += this.m_y_speed
+        const radius = 3;
         context.fillStyle = particle_color;
         context.beginPath( );
         context.arc( this.m_x, this.m_y, radius, kPi * 2, false );
@@ -15,103 +25,76 @@ class Particle {
         context.fill( );
     }
     
-    Link( other ) {
+    // TODO: possibly draw a line between the particles
+    /*Link( other ) {
         context.lineWidth = 1.3;
         context.beginPath( );
         context.moveTo( this.m_x, this.m_y );
         context.lineTo( other.m_x, other.m_y );
         context.stroke( );
         context.closePath( );
-    }
-    
-    Distance( other ) {
-        
-    }
+    }*/
 }
 
-const kPi = 3.14159265358979323846, kDegToRad = kPi / 180.0, kRadToDeg = 180.0 / kPi;
-    
-rad = function( degrees ) { return degrees * kDegToRad; },
-deg = function( radians ) { return radians * kRadToDeg; }
-
-
-var canvas = { }, context = { }, particles = [ ], particle_color = "#f242f2", line_color = "#dc34f2",
-    max_particles = 80, current_particle = { };
-
-function CreateParticle( ) {
+function DrawParticles( ) {
+    // clear the canvas
+    context.clearRect( 0, 0, canvas.width, canvas.height );
     var item = { };
-    
+
+    // iterate through and add the particles and move them
     for( var i = 0; i < max_particles; ++i ) {
         particles.push( new Particle( Math.random( ) * canvas.width, Math.random( ) * canvas.height ) );
-    }
-}
-
-function UpdatePosition( ) {
-    var item = { }, distance_x = { }, distance_y = { }, distance = { };
-
-    for( var i = 0; i < max_particles; ++i ) {
         item = particles[ i ];
-        // random number
-        item.m_x += item.m_x_speed;
-        item.m_y += item.m_y_speed;
-        /*for( var k = i + 1; k < max_particles; ++i ) {
-            item2 = particles[ k ];
-            distance_x = item.m_x - item2.m_x;
-            distance_y = item.m_y - item2.m_y;
-            distance = Math.sqrt( distance_x * distance_x + distance_y * distance_y );
-            if( distance > 150 ) continue;
-            
-            item.Link( item2 );
-        }*/
-    }
-}
-function DrawParticles() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    UpdatePosition();
         
-    for( var i = 0; i < max_particles; ++i ) {
-        current_particle = particles[i];
-        if( current_particle.m_x > canvas.width || current_particle.m_x < 0 )
-            current_particle.m_x_speed = -current_particle.m_x_speed;
-        
-        if( current_particle.m_y > canvas.height || current_particle.m_y < 0 )
-            current_particle.m_y_speed = -current_particle.m_y_speed;
-            
-        current_particle.Draw();
+        Check( item );
+        item.Draw( );
     }
 }
 
+// check for speeds and walls of canvas
+// sanity check of sorts
+function Check( item ) {
+    // if the x is at the edge make them bounce off of the side
+    if( item.m_x > canvas.width || item.m_x < 0 )
+        item.m_x_speed = -item.m_x_speed;
+        
+    // if the y is at the top/bottom bounce off of the top/bottom
+    if( item.m_y > canvas.height || item.m_y < 0 )
+        item.m_y_speed = -item.m_y_speed;
+    
+    // reassign the speed so they are not too slow
+    if( item.m_x_speed < 0.75 && item.m_x_speed > -0.75 
+       || item.m_y_speed < 0.75 && item.m_y_speed > -0.75 ) {
+        item.m_x_speed = ( Math.random( ) * ( 1.50 + 1.50 ) - 1.50 );
+        item.m_y_speed = ( Math.random( ) * ( 1.50 + 1.50 ) - 1.50 );
+    }
+}
+
+// very big thanks to this post with helping fix the blur
 // https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
-function FixDpi() {
+function FixDpi( ) {
     //get DPI
     let dpi = window.devicePixelRatio;
 
     //create a style object that returns width and height
     let style = {
-        height() {
+        height( ) {
             return +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
-        },
-        width() {
+        }, width( ) {
             return +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
         }
     }
+    
     //set the correct attributes for a crystal clear image!
-    canvas.setAttribute('width', style.width() * dpi);
-    canvas.setAttribute('height', style.height() * dpi);
+    canvas.setAttribute( 'width', style.width( ) * dpi );
+    canvas.setAttribute( 'height', style.height( ) * dpi );
 }
 
-function Render( ) {
-    // REMINDER: js you must make a new variable
-    // var rad = 1.3;
-    // console.log( "before: ", rad );
-    // var converted = Deg( rad );
-    // console.log( "after: ", converted );
-    
-    canvas = document.getElementById( 'main-canvas' );
-    context = canvas.getContext( '2d' );
+function Render( ) {    
+    canvas = document.getElementById( "main-canvas" );
+    context = canvas.getContext( "2d" );
     FixDpi( );
 
-    CreateParticle( );
     DrawParticles( );
     window.requestAnimationFrame( Render );
 }

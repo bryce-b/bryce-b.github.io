@@ -1,0 +1,264 @@
+<!--state what version of html we are using-->
+<!DOCTYPE html>
+<!--inform the browser to use english-->
+<html lang="en">
+	<!-- start the head-->
+	<head>
+		<!--get the scrW and scrH and set the scaling to 1 aka 100% zoom-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		
+		<!--set the chars to 8bit unicode transformation format-->
+		<meta charset="utf-8"/>
+        
+		<!--set the description for the website-->
+		<meta name="description" content="3rd grade educational site on the solar system"/>
+        
+		<!--sets the author of the web page-->
+		<meta name="author" content="Bryce B"/>
+		
+		<!--set the keywords that can be used to find the site-->
+		<meta name="keywords" content="solay system, 3rd grade solar"/>
+        
+		<!--create a link to the style sheet-->
+		<link rel="stylesheet" href="css/main.css"/>
+		
+		<!--create the icon thats in the browser tab-->
+		<link rel="icon" type="image/png" href="media/logo.png" sizes="any"/>
+		
+		<!--add jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<!--include my javascript function-->
+		<script src="js/main.js"></script>
+		
+		<!--set the page name-->
+		<title>Solar System</title>
+		
+	</head>
+	
+	<!--start the body of the website-->
+	<body>
+		<header>
+			<img class="size" src="media/logo.png" alt="Logo for the website"/>
+			Solar System
+		</header>
+		
+		<nav>
+			<!--make a button for us to click-->
+			<button class="hamburger">&#9776;</button>
+			<ul class="nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#galaxy">Galaxy</a></li>
+				<li><a href="#planets">Planets</a></li>
+				<li><a href="#games">Games</a></li>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			
+		</nav>
+		
+		<div class="content">
+			<div class="flex_parent_container">
+				<div class="box box1 curve">
+					<video controls autoplay class="curve">
+						<source src="media/video.mp4" type="video/mp4"/>
+						<!--commented out because for some reason it 
+						sets to 500 minutes after converting (tried everything)
+						<source src="media/x.webm" type="video/webm"/>-->
+						<source src="media/video.ogg" type="video/ogg"/>
+						Your browser doesnt support this.
+					</video>
+					
+				</div>
+				
+			</div>
+			
+			<!--start the section for galaxy-->
+			<div id="galaxy" class="flex_parent_container box header curve center-text">
+				Galaxy
+			</div>
+			
+			<div class="box flex_parent_container curve">
+				<article class="box1">
+					<h1>The Galaxy</h1>	
+					<p>The galaxy is a very large place.<br /><br />
+						While we live in the Milky Way galaxy there are estimated
+						to be 100 billion other ones&#46;<br /><br /> It is said our
+						galaxy has 100&#45;400 billion stars&#46;<br /><br />
+						They estimate that the diameter is
+						100&#44;000&#45;180&#44;000 light years&#46;</p>
+						
+				</article>
+				
+				<div class="box2">
+					<img class="append curve" src="media/galaxy.png" alt="picture of the galaxy"/>
+					
+				</div>
+				
+			</div>
+			
+			<!--start the section for planets-->
+			<div id="planets" class="flex_parent_container box header curve center-text">
+				Planets
+			</div>
+			
+			<div class="flex_parent_container">
+				<article class="box box1 curve">
+					<h2>Mercury</h2>
+					<p>The planet Mercury has zero moons&#46;<br /><br />
+						Along with your weight on Mercury being 38&#37; 
+						less than what it is on earth.<br /></p>
+					
+					<img class="center" src="media/mercury.png" alt="a picture of the planet mercury"/>
+				</article>
+				
+				<article class="box box2 curve">
+					<h2>Venus</h2>
+					<p>The planet Venus is the hottest in the solar 
+						system because it has a thick atmosphere&#46;<br /><br />
+						Like Mercury, Venus also has zero moons&#46;</p>
+					
+					<img class="center" src="media/venus.png" alt="a picture of the planet venus"/>
+				</article>
+				
+				<article class="box box3 curve">
+					<h2>Earth</h2>
+					<p>The planet Earth is the only planet capable of humans living on it&#46;<br /><br />
+						Earth&#39;s year is 365 Earth days long&#46;</p>
+					
+					<img class="center" src="media/earth.png" alt="a picture of the planet earth"/>
+				</article>
+				
+			</div>
+			
+			<div class="flex_parent_container">
+				<article class="box box1 curve">
+					<h2>Mars</h2>
+					<p>A year on the planet Mars is 687 Earth days long&#46;<br /><br />
+						There have been 39 missions to Mars, only 16 have been successful&#46;</p>
+					
+					<img class="center" src="media/mars.png" alt="a picture of the planet mars"/>
+				</article>
+					
+				<article class="box box2 curve">
+					<h2>Jupiter</h2>
+					<p>The planet Jupiter has the shortest day of all planets&#46; <br /><br />
+						The planet&#39;s year is 12 Earth years&#46;</p>
+					
+					<img class="center" src="media/jupiter.png" alt="a picture of the planet jupiter"/>
+				</article>
+				
+				<article class="box box3 curve">
+					<h2>Saturn</h2>
+					<p>The planet Saturn has 62 moons&#46;<br /><br />
+						A year on Saturn is 29 Earth years&#46;</p>
+					
+					<img class="center" src="media/saturn.png" alt="a picture of the planet saturn"/>
+				</article>
+				
+			</div>
+
+			<div class="flex_parent_container">
+				<article class="box box1 curve">
+					<h2>Uranus</h2>
+					<p>The planet Uranus has the coldest temperatures out of all the planets&#46;<br /><br />
+						A year on Uranus is 84 Earth years&#46;</p>
+					
+					<img class="center" src="media/uranus.png" alt="a picture of the planet uranus"/>
+				</article>
+				
+				<article class="box box2 curve">
+					<h2>Neptune</h2>
+					<p>The planet Neptune has the second largest gravity&#46; &#40;Largest is Jupiter&#41; <br /><br />
+						A year on Neptune is 165 Earth Years&#46;</p>
+					
+					<img class="center" src="media/neptune.png" alt="a picture of the planet neptune"/>
+				</article>
+				
+			</div>
+			
+			<div id="games" class="flex_parent_container box header center-text curve">
+				Games
+			</div>
+			
+			<div class="flex_parent_container">
+				<article class="box box1 curve center-text">
+					<!--set the name for the download to word search-->
+					<a href="https://www.proprofs.com/games/word-search/solar-system-word-search-7/" target="_blank"><h2>Word Search</h2>
+						<img class="center" src="media/ws.png" alt="a picture of the wordsearch game"/>
+					</a>
+					
+				</article>
+				
+				<article class="box box2 curve center-text">
+					<a href="https://www.proprofs.com/games/crossword/solar-system-crossword/" target="_blank"><h2>Crossword</h2>
+						<img class="center" src="media/cw.png" alt="a picture of the crossword game"/>
+					</a>
+					
+				</article>
+				
+				<article class="box box3 curve center-text">
+					<a href="https://www.proprofs.com/games/word-games/hangman/hangman-for-the-solar-system/" target="_blank"><h2>Hangman</h2>
+						<img class="center" src="media/hm.png" alt="a picture of the hang man game"/>
+					</a>
+					
+				</article>
+				
+			</div>
+			
+			<!--start the section for the about me-->
+			<div class="flex_parent_container box header curve center-text">
+				About Me and Contact
+			</div>
+			
+			<div class="flex_parent_container">
+				<article class="box box1 curve">
+					<h2 id="about">About me</h2>
+					<p>Bryce B is a high school student working on
+						becoming a web developer and expanding his knowledge
+						on programming&#46; <br /><br /> He is currently a student 
+                        and is taking a Web and Game Development
+						class from a tech center&#46; <br /><br />
+						In his free time he enjoys playing video games&#44;
+						programming&#44; reverse engineering&#44; CrackMes&#44; and CTF&#46;
+						&#40;<a href="https://hsctf.com/#faq" target="_blank">Capture The Flag</a>&#41;
+						
+					</p>
+					
+				</article>
+
+				<article class="box box2 curve">
+					<h2 id="contact">Contact me</h2>
+                    <p>If you need to contact me please <a href="mailto:">email me</a>
+						and I will reply as soon as I am able to&#46;<br />
+					</p>
+					
+				</article>
+			
+			</div>
+			
+		</div>
+		
+		<!--set the footer-->
+		<footer>
+			<div class="flex_parent_container">
+				<div class="fc fbox fbox1">
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+				</div>
+					
+				<div class="fc fbox fbox2">
+					Last Updated: 11/28/2018
+				</div>
+				
+				<div class="fc fbox fbox3">
+					<a href="mailto:">Email Webmaster</a><br /><br />
+				</div>
+			
+			</div>
+		
+		</footer>
+	
+	</body>
+
+</html>

@@ -1,0 +1,410 @@
+<!--state what version of html we are using-->
+<!DOCTYPE html>
+<!--inform the browser to use english-->
+<html lang="en">
+<!-- start the head-->
+<head>
+    <!--get the scrW and scrH and set the scaling to 1 aka 100% zoom-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--set the chars to 8bit unicode transformation format-->
+    <meta charset="utf-8" />
+
+    <!--set the description for the website-->
+    <meta name="description" content="Bryce's computer teardown website" />
+
+    <!--sets the author of the web page-->
+    <meta name="author" content="Bryce B" />
+
+    <!--set the keywords that can be used to find the site-->
+    <meta name="keywords" content="computer teardown, computer, computer rebuild" />
+
+    <!--create a link to the style sheet-->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!--create the icon thats in the browser tab-->
+    <link rel="icon" type="image/png" href="media/case.png" sizes="any" />
+
+    <!--add jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--include my javascript function-->
+    <script src="js/main.js"></script>
+
+    <!--set the page name-->
+    <title>Computer Teardown</title>
+
+</head>
+
+<!--start the body of the website-->
+<body>
+    <header>
+        computer tear down
+        <img class="size" src="media/case.png" alt="Photo of a dell computer case" />
+    </header>
+
+    <nav>
+        <!--make a button for us to click-->
+        <button class="hamburger">&#9776;</button>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#problems">Problems</a></li>
+            <li><a href="#steps">Steps</a></li>
+            <li><a href="teardown_documentation.pdf" download>pdf</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="content">
+        <div class="box preview_flex">
+            <button class="preview_button button_left">&lArr;</button>
+
+            <div class="preview_content box1">
+                <div class="image_parent">
+                    <ul class="preview">
+                        <!--1-->
+                        <li><img class="order1 main" src="media/slideshow/1.png" alt="anti-static bags" />
+                            <img class="order2 main" src="media/slideshow/2.png" alt="computer on the desk" />
+                            <img class="order3 main" src="media/slideshow/42.png" alt="connect yourself to the computer" /></li>
+
+                        <!--2-->
+                        <li><img class="order1 main" src="media/slideshow/3.png" alt="computer case opening" />
+                            <img class="order2 main" src="media/slideshow/insides.png" alt="the insides of the computer" /> </li>
+
+                        <!--3-->
+                        <li><img class="order1 main" src="media/slideshow/4.png" alt="cd drive" />
+                            <img class="order2 main" src="media/slideshow/5.png" alt="cd drive cables" />
+                            <img class="order3 main" src="media/slideshow/7.png" alt="cd drive in an anti-static bag" /> </li>
+
+                        <!--4-->
+                        <li><img class="order1 main" src="media/slideshow/8.png" alt="hard drive in the original position" />
+                            <img class="order2 main" src="media/slideshow/9.png" alt="hard drive cables" />
+                            <img class="order3 main" src="media/slideshow/10.png" alt="hard drive in anti-static bag" /></li>
+
+                        <!--5-->
+                        <li><img class="order1 main" src="media/slideshow/11.png" alt="RAM in the slots" />
+                            <img class="order2 main" src="media/slideshow/12.png" alt="tabs opened on the ram slot" />
+                            <img class="order3 main" src="media/slideshow/13.png" alt="the RAM in an anti-static bag" /></li>
+
+                        <!--6-->
+                        <li><img class="order1 main" src="media/slideshow/15.png" alt="graphics card" />
+                            <img class="order2 main" src="media/slideshow/14.png" alt="cable connecting to graphics card" />
+                            <img class="order3 main" src="media/slideshow/16.png" alt="blue lever holding the graphics card in" /></li>
+
+                        <!--7-->
+                        <li><img class="order1 main" src="media/slideshow/27.png" alt="the large cable connected to the motherboard" />
+                            <img class="order2 main" src="media/slideshow/19.png" alt="the small cable closest to the cpu" />
+                            <img class="order3 main" src="media/slideshow/22.png" alt="blue tab to press down on" /></li>
+
+                        <!--8-->
+                        <li><img class="order1 main" src="media/slideshow/25.png" alt="power supply being put back into the spot" />
+                            <img class="order2 main" src="media/slideshow/26.png" alt="where to plug the small cable in" />
+                            <img class="order3 main" src="media/slideshow/27.png" alt="where to plug the large cable in" /></li>
+
+                        <!--9-->
+                        <li><img class="order1 main" src="media/slideshow/29.png" alt="graphics card plug in area" />
+                            <img class="order2 main" src="media/slideshow/31.png" alt="graphics card plugged in and connected to the board" />
+                            <img class="order3 main" src="media/slideshow/32.png" alt="latch closed" /></li>
+
+                        <!--10-->
+                        <li><img class="order1 main" src="media/slideshow/33.png" alt="ram stick slots" />
+                            <img class="order2 main" src="media/slideshow/34.png" alt="a single ram inserted into the slot" />
+                            <img class="order3 main" src="media/slideshow/35.png" alt="both sticks of ram inserted and shows the tabs" /></li>
+
+                        <!--11-->
+                        <li><img class="order1 main" src="media/slideshow/36.png" alt="the hard drive connected to the case and resting" />
+                            <img class="order2 main" src="media/slideshow/4.png" alt="cd drive plugged in" /></li>
+
+                        <!--12-->
+                        <li><img class="order1 main" src="media/slideshow/40.png" alt="case closed" />
+                            <img class="order2 main" src="media/slideshow/43.png" alt="everything back in the tub" /></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="preview_text box2">
+                <h2 id="edit">Showing steps for #</h2>
+                <ul class="text">
+                    <!--1-->
+                    <li><p>The first step is to take the anti&#45;static bags out of
+                        the box and place it on the table I also recommend
+                        doing this with the computer&#46; Connect yourself to the
+                        Computer and start the teardown&#46;</p></li>
+
+                    <!--2-->
+                    <li><p>After this you will want to lift the handle and
+                        take the side panel off revealing the insides of the computer</p></li>
+
+                    <!--3-->
+                    <li><p>Here you will see the CD Drive&#44; before you take this out you
+                        will want to pull the cables that are connected to it out&#46;
+                        After this you will want to pull on the blue tabbed area to remove
+                        the CD Drive&#46;
+                        To finish this step please place the CD Drive
+                        in your anti&#45;static bag&#46;</p></li>
+
+                    <!--4-->
+                    <li><p>Now we move onto taking the hard drive out of the computer&#46;
+                        Start by disconnecting the hard drive by pulling the cables out of it&#46;
+                        Simply just lift up on the hard drive to release it from its position&#44;
+                        Since were done with this step we can now place it in the anti&#45;static bag
+                        and move on&#46;</p></li>
+
+                    <!--5-->
+                    <li><p>Taking the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        out is simple&#44; just push the tan things that hold it
+                        in place away from the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        and carefully lift them out&#46;
+                        Carefully place the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        in the bag&#46;</p></li>
+
+                    <!--6-->
+                    <li><p>Lift the latch that is holding the 
+                        <span class="tooltip">GPU<span class="tooltiptext">GPU.
+                            (Graphics Processing Unit) A programmable
+                            logic chip (processor) specialized for display functions. The GPU
+                            renders images, animations and video for the computer's screen&#46;</span></span>
+                        
+                        down&#46; Unplug the item that has a thick red and white
+                        wire connected to the actual
+                        <span class="tooltip">GPU<span class="tooltiptext">GPU.
+                            (Graphics Processing Unit) A programmable
+                            logic chip (processor) specialized for display functions.
+                            The GPU renders images, animations and video
+                            for the computer's screen&#46;</span></span>&#46;
+                        
+                        If you look on the side you will see a blue tab holding the
+                        <span class="tooltip">GPU<span class="tooltiptext">GPU.
+                            (Graphics Processing Unit) A programmable
+                            logic chip (processor) specialized for display functions. The GPU
+                            renders images, animations and video for the computer's screen&#46;</span></span>
+                        in place&#44; push it away from the card and life the card out carefully&#46;</p></li>
+
+                    <!--7-->
+                    <li><p>Removing the power supply requires you to unplug the large 16 pin connecting
+                        it to the motherboard&#44; then the smaller 4 pin one connected into the motherboard
+                        at the spot closest to the
+                        <span class="tooltip">CPU<span class="tooltiptext">CPU
+                            (pronounced as separate letters) is the abbreviation for
+                            central processing unit. Sometimes referred to simply as
+                            the central processor, but more commonly called processor,
+                            the CPU is the brains of the computer where most calculations
+                            take place.</span></span>&#46;
+                        Press down on the blue tab and slide the cpu up and at the blue marking&#46;
+                        Finish by taking it out of the case and placing it to the side&#46;</p></li>
+
+                    <!--8-->
+                    <li><p>Now we start putting it all back together&#44; to do this we can go
+                        ahead and start with putting the power supply back into the spot we
+                        just took it out&#46; Look at the bottom of the power supply then
+                        line up the holes on the bottom with the parts sticking out on the case&#46;
+                        Slide it in and youll probably hear a click continue this by plugging in the
+                        cables that you disconnected early back into their previous spots&#46;</p></li>
+
+                    <!--9-->
+                    <li><p>Slide the graphics card back into its place&#59; please make sure its going in the right
+                        way by lining up the hole with the part that sticks out in the slot&#46; After you will want to
+                        slide in the display adapter and finish by closing the latch over them after they are fully in&#46;</p></li>
+
+                    <!--10-->
+                    <li><p>Were going to want to put the 
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        back in by lining up the hole on the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        stick with
+                        the part sticking up in the slot&#46; Gently press in the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>&#46;
+                        &#40;If you have troubles
+                        push down on one side until it clicks in then do the other&#46;&#41;</p></li>
+
+                    <!--11-->
+                    <li><p>Gently set the hard drive case back and let it hang over the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>&#46;
+                        Now plug the cables back into the hard drive&#46; Slide the CD Drive back and
+                        finish by plugging it in&#46;</p></li>
+
+                    <!--12-->
+                    <li><p>For the last steps you will want to put the cover back on&#44; Now disconnect yourself from
+                        the computer now you are done you just have to put the anti&#45;static bags and computer
+                        back into the tub&#46;</p></li>
+                </ul>
+
+            </div>
+
+            <button class="preview_button button_right">&rArr;</button>
+
+        </div>
+
+        <div id="problems" class="flex_parent_container">
+            <article class="box box1">
+                <h2>Problems</h2>
+                <p>The list of ten common problems to have while
+                    taking a computer apart or simply rebuilding one&#46;</p>
+                <ol>
+                    <!--1-->
+                    <li><p>Buying incompatible components&#46;</p></li>
+
+                    <!--2-->
+                    <li><p>Not doing cable management&#46;</p></li>
+
+                    <!--3-->
+                    <li><p>Leaving plastic on parts&#46;</p></li>
+
+                    <!--4-->
+                    <li><p>Slotting the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        wrong&#46;</p></li>
+
+                    <!--5-->
+                    <li><p>Plugging monitor into motherboard instead of
+                        <span class="tooltip">GPU<span class="tooltiptext">GPU.
+                            (Graphics Processing Unit) A programmable
+                            logic chip (processor) specialized for display functions. The GPU
+                            renders images, animations and video for the computer's screen&#46;</span></span>&#46;</p></li>
+
+                    <!--6-->
+                    <li><p>Applying just ther right amount of force&#46;</p></li>
+
+                    <!--7-->
+                    <li><p>Trying to plug in the wrong cables&#46;</p></li>
+
+                    <!--8-->
+                    <li><p>Careless handling of parts&#46;</p></li>
+
+                    <!--9-->
+                    <li><p>Working on it while its plugged in&#46;</p></li>
+
+                    <!--10-->
+                    <li><p>Squashing cables&#46;</p></li>
+                </ol>
+                
+            </article>
+
+            <article class="box box2">
+                <h2>Fixes</h2>
+                <p>Here is how you would fix some of the common issues
+                    that many people can run into&#46;</p>
+                <ol>
+                    <!--1-->
+                    <li><p>Check on multiple sites for the parts compatibility&#46;</p></li>
+                    
+                    <!--2-->
+                    <li><p>While you are taking putting the computer together
+                        make sure you try to hide cables as much as possible&#46;</p></li>
+                    
+                    <!--3-->
+                    <li><p>Make sure that you have all of the thin
+                        plastic on top of the parts off&#46;</p>
+                        
+                        <div class="image_parent"><img class="append" src="media/peel.png" alt="picture of a person peeling off the thin plastic layer" /></div></li>
+                    
+                    <!--4-->
+                    <li><p>Look at the slot on the motherboard then on the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        make sure the indent on the
+                        <span class="tooltip">RAM<span class="tooltiptext">RAM (pronounced ramm)
+                            is an acronym for random access memory, a type
+                            of computer memory that can be accessed
+                            randomly&#46;</span></span>
+                        lines up
+                        with the part sticking up on the motherboard&#46;
+                        </p>
+                        <div class="image_parent">
+                            <img class="append" src="media/ram.png" alt="photo of ram with the slot highlighted" />
+                            <img class="append" src="media/board.png" alt="photo of the RAM slot highlighted" />
+                        </div>
+                    
+                    </li>
+
+                    <!--5-->
+                    <li><p>Plug your monitor into your
+                        <span class="tooltip">GPU<span class="tooltiptext">GPU.
+                            (Graphics Processing Unit) A programmable
+                            logic chip (processor) specialized for display functions. The GPU
+                            renders images, animations and video for the computer's screen&#46;</span></span>
+                        instead of your motherboard&#46;</p></li>
+
+                    <!--6-->
+                    <li><p>To apply just the right amount of force
+                        push/pull with only your hands and wrists&#46;</p></li>
+
+                    <!--7-->
+                    <li><p>Avoid plugging the cables into the
+                        wrong areas make sure that you read the
+                        manuals that come with your parts&#46;</p></li>
+
+                    <!--8-->
+                    <li><p>Handle your parts carefully&#44; they may look very
+                        durable but they have a lot of very small parts
+                        on them that allows them to break easily&#46;</p></li>
+
+                    <!--9-->
+                    <li><p>DO NOT work with your computer plugged into anything&#46;</p></li>
+
+                    <!--10-->
+                    <li><p>Don’t squash your cables in your case&#46;</p>
+                        <div class="image_parent"><img class="append" src="media/cable.png" alt="photo of bad cable management" /></div></li>
+                </ol>
+
+
+            </article>
+
+        </div>
+
+    </div>
+
+    <!--set the footer-->
+    <footer class="fc">
+        <div class="flex_parent_container">
+            <div class="fbox fbox1">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+            </div>
+
+            <div class="fbox fbox2">
+                Last Updated: 1/7/2019
+            </div>
+
+            <div class="fbox fbox3">
+                <a href="mailto:">Email Webmaster</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
