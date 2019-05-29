@@ -1,0 +1,50 @@
+ol { font-size: 1.2em; }
+ul.information li { display: inline; }
+ul.projects li { display: inline; }
+ul.nav li { margin: 0 1em 0 0; display: inline; }
+ul.nav li a { color: #dddddd; }
+ul.main li { display: inline; }
+ul.main li a { color: #42fafa; }
+ul.projects li { padding: 0 0 .4em 0; }
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
+ol.projects { 
+    max-width: 10vw;
+    padding: 0 0 0 16px;
+}
+
+ol.projects li {
+    padding: 0 0 0.5vw 0;
+    color: #42fafa;
+}
+
+ol.projects li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ul.nav {
+    margin: 0;
+    list-style-type: none;
+    display: inline;
+}
+
+ul.information {
+    display: inline;
+    list-style: none;
+}
+
+ul.projects {
+    display: inline;
+    list-style: none;
+}
+

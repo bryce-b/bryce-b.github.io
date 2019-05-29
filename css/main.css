@@ -37,55 +37,9 @@ nav {
     background-color: #111111;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-ul li {
-    margin: 0;
-    padding: 0;
-}
-
-ol { font-size: 1.2em; }
-ol.projects li { color: #007979; }
-
-ol.projects li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-ul.nav {
-    margin: 0;
-    list-style-type: none;
-    display: inline;
-}
-
-ul.information {
-    display: inline;
-    list-style: none;
-}
-
-ul.information li { display: inline; }
-
-ul.projects {
-    display: inline;
-    list-style: none;
-}
-
-ul.projects li { display: inline; }
-
-ul.nav li { margin: 0 1em 0 0; display: inline; }
-ul.nav li a { color: #dddddd; }
-ul.main li { display: inline; }
-ul.main li a { color: #42fafa; }
-ul.projects li { padding: 0 0 .4em 0; }
-
 img.projects {
-    max-height: 3in;
-    max-width: 4in;
-    border-radius: 2em;
     margin: auto;
+    width: 45vw;
     vertical-align: middle;
 }
 
@@ -143,37 +97,24 @@ img.projects {
 }
 
 .grid {
+    margin: auto;
     display: grid;
-    grid-template-columns: 36vw 60vw;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
     width: 100vw;
 }
 
 .projects-info-grid {
     grid-row: 1;
     grid-column: 1;
-    margin: 10px 0 0 0;
+    margin: 10px 0 10px 10px;
 }
 
 .project-preview-grid {
     padding: 5px;
-    grid-row: span 3;
+    grid-row: span 1;
     grid-column: 2;
-    margin: 10px 0 10px 0;
-}
-
-.main-info-grid {
-    grid-row: 2;
-    grid-column: 1;
-    margin: 10px;
-    padding: 10px;
-}
-
-.certs-info-grid {
-    grid-row: 3;
-    grid-column: 1;
-    margin: 10px;
-    padding: 10px;
+    margin: 10px 10px 10px 0;
 }
 
 canvas#main-canvas {
@@ -181,8 +122,21 @@ canvas#main-canvas {
     width: 98vw;
 }
 
-embed {
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
+.backgrounds {
+    color: #eeeeee;
+    background-color: #222222;
+    border: 3px solid transparent;
+    padding: 0.3vw;
+}
+
+.backgrounds:hover {
+    border: 3px solid #a333a3;
+}
+
+button#projects {
+    font-size: 4vh;
+    color: #eeeeee;
+    border: 0;
+    background-color: #222222;
+    cursor: pointer;
 }

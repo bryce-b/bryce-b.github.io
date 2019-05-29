@@ -3,13 +3,13 @@ $( document ).ready( function( ) {
     
     var $nav = $( "ul.nav" ),
         $hamburger = $( ".hamburger" ),
-        $particle = $( ".particles-js" ),
-        $item;
+        $item = { },
+        $projects = $( "button#projects" ),
+        $project_list = $( "ol.projects" ),
+        $second_projects = $( "ol.projects li" );
     
     $nav.hide( );
     $hamburger.hide( );
-    
-    $( ".main-section" ).css( "max-height", $particle.height( ) );
     
     $( window ).scroll( function( ) {
         var $scroll = $( window ).scrollTop( ),
@@ -28,17 +28,22 @@ $( document ).ready( function( ) {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     } );
     
-    $( "ol li:eq(0)" ).click( function( ) { $item = 0; } );
-    $( "ol li:eq(1)" ).click( function( ) { $item = 1; } );
-    $( "ol li:eq(2)" ).click( function( ) { $item = 2; } );
-    $( "ol li:eq(3)" ).click( function( ) { $item = 3; } );
+    $( "ol.projects li:eq(0)" ).click( function( ) { $item = 0; } );
+    $( "ol.projects li:eq(1)" ).click( function( ) { $item = 1; } );
+    $( "ol.projects li:eq(2)" ).click( function( ) { $item = 2; } );
+    $( "ol.projects li:eq(3)" ).click( function( ) { $item = 3; } );
     
-    $( "ol li" ).click( function( ) {
+    $( "ol.projects li" ).click( function( ) {
         $( "ul.projects li" ).hide( );
-        $( "ul.projects li:eq(" + $item + ")" ).show( );
+        $( "ul.projects li:eq(" + $item + ")" ).slideToggle( );
         
         $( "ul.information li" ).hide( );
         $( "ul.information li:eq(" + $item + ")" ).slideToggle( );
+    } );
+    
+    $projects.click( function( ) { 
+        $project_list.slideToggle( "fast", function( ) { } );
+        $second_projects.slideToggle( "fast", function( ) { } );
     } );
     
     $hamburger.click( function( ) {
@@ -48,4 +53,10 @@ $( document ).ready( function( ) {
     $( "ul.nav li a" ).click( function( ) {
         $nav.slideToggle( "fast", function( ) { } );
     } );
+    
+    $( "ul.projects li" ).hide( );
+    $( "ul.projects li:eq(0)" ).slideToggle( );
+        
+    $( "ul.information li" ).hide( );
+    $( "ul.information li:eq(0)" ).slideToggle( );
 } );

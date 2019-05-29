@@ -1,0 +1,197 @@
+<!--state what version of html we are using-->
+<!DOCTYPE html>
+<!--inform the browser to use english-->
+<html lang="en">
+	<!-- start the head-->
+	<head>
+		<!--get the scrW and scrH and set the scaling to 1 aka 100% zoom-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<!--set the chars to 8bit unicode transformation format-->
+		<meta charset="utf-8"/>
+        
+        <meta name="description" content="The main website for the game Les Escargots Noirs" />
+        
+        <meta name="keywords" content="" />
+        
+        <!--create a link to the style sheet-->
+        <link rel="stylesheet" href="css/main.css"/>
+        
+        <!--create the icon image-->
+        <link rel="icon" type="image/png" href="media/logo.PNG" sizes="any"/>
+
+        <!--add jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!--include my javascript-->
+	    <script src="js/main.js"></script>
+		
+		<!--set the page name-->
+		<title>Les Escargots Noirs</title>
+		
+	</head>
+	
+	<!--start the body of the website-->
+	<body>
+        <header>
+            <img class="logo" src="media/logo.PNG" alt="Les Escargots Noirs logo" />
+            Les Escargots Noirs
+        </header>
+        
+        <nav>
+            <!--make a button for us to click-->
+            <button class="hamburger">&#9776;</button>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#general">General Information</a></li>
+                <li><a href="game/index.html">Play</a></li>
+            </ul>
+
+        </nav>
+        
+        <div class="content">
+            <div class="parent_box">
+                <div class="flex_parent_container">
+                    <div class="box box1 child_box">
+                        <h2 class="center"><a href="game/index.html">Play</a></h2>
+                    </div>
+                    
+                </div>
+                
+                <div class="flex_parent_container">
+                    <div class="box box1 child_box">
+                        <video controls autoplay>
+                            <source src="media/main.mp4" type="video/mp4"/>
+                        </video>
+                    
+                    </div>
+                
+                </div>    
+                    
+            </div>
+            
+            <div id="characters" class="flex_parent_container header_box">
+                Characters
+            </div>
+            
+            <div class="parent_box">
+                <div class="flex_parent_container">
+                    <div class="box box1 child_box">
+                        <h2>Ken</h2>
+                        <div class="flex_child">
+                            <p class="text">Ken has no shell, which means he has no special
+                                abilities. Keep searching for shells!</p>
+                            
+                            <img class="center picture" src="media/ken.png" alt="ken without a shell" />
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="box box2 child_box">
+                        <h2>Boogly Shell</h2>
+                        <div class="flex_child">
+                            <p class="text">While Ken has the Boogly Shell
+                                he has the slime bullet power-up.</p>
+                            
+                            <img class="center picture" src="media/ken2.png" alt="ken with the boogly shell" />
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="box box3 child_box">
+                        <h2>Skoogly Shell</h2>
+                        <div class="flex_child">
+                            <p class="text">While Ken has the Skoogly Shell
+                                he has the power to perform a medium jump.</p>
+                            
+                            <img class="center picture" src="media/ken3.png" alt="ken with the skoogly shell" />
+                        </div>
+                        
+                    </div>
+
+                </div>
+                
+                <div class="flex_parent_container">
+                    <div class="box box1 child_box">
+                        <h2>Skala Shell</h2>
+                        <div class="flex_child">
+                            <p class="text">When Ken has the Skala Shell you
+                                will be able to perform a short jump.</p>
+                            
+                            <img class="center picture" src="media/ken4.png" alt="ken with the skala shell" />
+                        </div>
+                        
+                    </div>
+
+                    <div class="box box2 child_box">
+                        <h2>Oogly Shell</h2>
+                        <div class="flex_child">
+                            <p class="text">When Ken has the Oogly shell he
+                                has the ability to become invincible.</p>
+                            
+                            <img class="center picture" src="media/ken5.png" alt="ken with the oogly shell" />
+                        </div>
+                        
+                    </div>
+
+                </div>
+            
+            </div>
+
+            <div id="general" class="flex_parent_container header_box">
+                General Information
+            </div>
+
+            <div class="flex_parent_container parent_box">
+                <div class="box box1 child_box">
+                    <h2>Contact</h2>
+                    <p>Experiencing any problems with the game&#44; website&#44; or
+                        have any further questions? Please contact the project manager&#44;
+                        <a href="mailto:">Bryce B at</a>&#46;</p>
+                </div>
+
+                <div class="box box2 child_box">
+                    <h2>FAQ</h2>
+                    <div class="faq">
+                        <ul class="split">
+                            <li><div class="faq"><div class="question">What keys are used to move?</div>
+                                <ul><li>The W, A, S, and D keys are used to move.</li></ul>
+                            </div></li>
+
+                            <li><div class="faq"><div class="question">Where do I download or play?</div>
+                                <ul><li>You can play the game on the website
+                                    <a href="game/index.html">here</a>.</li></ul>
+                            </div></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <footer>
+            <div class="flex_parent_container">
+                <div class="footer_box box1">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+                </div>
+            
+                <div class="footer_box box2">
+                    Last Updated: 2/19/2019
+                </div>
+            
+                <div class="footer_box box3">
+                    <a href="mailto:">Email Webmaster</a>
+                </div>
+            
+            </div>
+            
+        </footer>
+        
+    </body>
+	
+</html>
