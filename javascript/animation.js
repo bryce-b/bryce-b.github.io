@@ -57,10 +57,14 @@ function Check( item ) {
     // if the x is at the edge make them bounce off of the side
     if( item.m_x > canvas.width || item.m_x < 0 )
         item.m_x_speed = -item.m_x_speed;
+    else if( item.m_x > canvas.width + 2 || item.m_x < -2 )
+        item.m_x = Math.random( ) * canvas.width;
         
     // if the y is at the top/bottom bounce off of the top/bottom
     if( item.m_y > canvas.height || item.m_y < 0 )
         item.m_y_speed = -item.m_y_speed;
+    else if( item.m_y > canvas.width + 2 || item.m_y < -2 )
+        item.m_y = Math.random( ) * canvas.height;
     
     // reassign the speed so they are not too slow
     if( item.m_x_speed < 0.75 && item.m_x_speed > -0.75 
@@ -70,7 +74,7 @@ function Check( item ) {
     }
 }
 
-// very big thanks to this post with helping fix the blur
+// thanks to this post with helping fix the blur
 // https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
 function FixDpi( ) {
     //get DPI

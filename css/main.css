@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
 body {
     background-color: #222222;
     color: #ffffff;
     font-size: 1em;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 p { font-size: 1.2em; }
@@ -14,16 +17,15 @@ a {
 a:hover { text-decoration: underline; }
 
 footer {
-    margin: 1em 0 0 0;
+    margin: 1vw 0 0 0;
     background: #111111;
     border: 1px solid #a333a3;
-    margin: 3px;
+    margin: .3vh .3vw;
 }
 
 footer a { color: #ffffff; }
 
 nav {
-    font-family: verdana, sans-serif;
     list-style: none;
     padding: 0 0 0 0;
     margin: 1em 0 0 1em;
@@ -48,7 +50,7 @@ img.projects {
     background-color: #dddddd;
 }
 
-.container { padding: 10px; }
+.container { padding: 1vw; }
 
 .flex-container {
     display: flex;
@@ -57,20 +59,20 @@ img.projects {
 }
 
 .box {
-    padding: 10px;
-    margin: 5px;
+    padding: 1vh 1vw;
+    margin: 0.5vh 0.5vw;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 3in;
-    min-width: 20px;
+    min-width: 2vw;
 }
 
 .fbox {
-    padding: 10px;
-    margin: 10px;
+    padding: 1vh 1vw;
+    margin: 1vh 1vw;
     flex-grow: 1;
     flex-shrink: 1;
-    min-width: 20px;
+    min-width: 2vw;
 }
 
 .b1 { order: 1; }
@@ -88,7 +90,7 @@ img.projects {
 .hamburger {
     background: none;
     line-height: 1.5em;
-    padding: 0 .5em 0 .5em;
+    padding: 0 0.5vh 0 0.5vh;
     color: #dddddd;
     border: 0;
     font-size: 1.5em;
@@ -107,14 +109,14 @@ img.projects {
 .projects-info-grid {
     grid-row: 1;
     grid-column: 1;
-    margin: 10px 0 10px 10px;
+    margin: 0.5vh 0 0.5vh 0.5vw;
 }
 
 .project-preview-grid {
-    padding: 5px;
+    padding: .5vh .5vw;
     grid-row: span 1;
     grid-column: 2;
-    margin: 10px 10px 10px 0;
+    margin: 0.5vh 0.5vw 0.5vh 0;
 }
 
 canvas#main-canvas {
@@ -123,6 +125,7 @@ canvas#main-canvas {
 }
 
 .backgrounds {
+    transition: border-color 0.25s linear;
     color: #eeeeee;
     background-color: #222222;
     border: 3px solid transparent;
@@ -130,7 +133,7 @@ canvas#main-canvas {
 }
 
 .backgrounds:hover {
-    border: 3px solid #a333a3;
+    border: 3px solid #b437b4;
 }
 
 button#projects {
