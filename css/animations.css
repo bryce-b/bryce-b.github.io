@@ -1,7 +1,7 @@
 .main-text {
-    font-size: 1.75em;
-    width: 20vw;
-    padding: 0.3vw 0.3vh;
+    font-size: 3em;
+    width: 35vw;
+    padding: 0.6vw 0.6vh;
     position: relative;
     -webkit-animation: main-text 0.6s linear both;
     animation: main-text 0.6s linear both;
@@ -10,12 +10,13 @@
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
     background: #111111;
-    border: 2px solid #a333a3;
 }
 
 @media only screen and (max-width: 600px) {
     .main-text {
-        width: 30vw;
+        font-size: 2em;
+        width: 80vw;
+        padding: 1.6vw 1.6vh;
     }
 }
 

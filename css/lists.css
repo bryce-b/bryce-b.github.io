@@ -3,7 +3,6 @@ ul.information li { display: inline; }
 ul.projects li { display: inline; }
 ul.nav li { margin: 0 1em 0 0; display: inline; }
 ul.nav li a { color: #dddddd; }
-ul.main li { display: inline; }
 ul.main li a { color: #42fafa; }
 ul.projects li { padding: 0 0 0.4vw 0; }
 
@@ -36,6 +35,11 @@ ol.projects li:hover {
     ol.projects {
         padding: 0 0 0 5vw;
     }
+}
+
+ul.main li {
+    display: inline;
+    margin: 0 1vw 0 0;
 }
 
 ul.nav {

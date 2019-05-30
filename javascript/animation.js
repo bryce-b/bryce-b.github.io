@@ -55,16 +55,12 @@ function DrawParticles( ) {
 // sanity check of sorts
 function Check( item ) {
     // if the x is at the edge make them bounce off of the side
-    if( item.m_x > canvas.width || item.m_x < 0 )
+    if( item.m_x > canvas.width - 2 || item.m_x < 2 )
         item.m_x_speed = -item.m_x_speed;
-    else if( item.m_x > canvas.width + 2 || item.m_x < -2 )
-        item.m_x = Math.random( ) * canvas.width;
         
     // if the y is at the top/bottom bounce off of the top/bottom
-    if( item.m_y > canvas.height || item.m_y < 0 )
+    if( item.m_y > canvas.height - 2 || item.m_y < 2 )
         item.m_y_speed = -item.m_y_speed;
-    else if( item.m_y > canvas.width + 2 || item.m_y < -2 )
-        item.m_y = Math.random( ) * canvas.height;
     
     // reassign the speed so they are not too slow
     if( item.m_x_speed < 0.75 && item.m_x_speed > -0.75 
@@ -77,23 +73,38 @@ function Check( item ) {
 // thanks to this post with helping fix the blur
 // https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da
 function FixDpi( ) {
-    //get DPI
+    // get DPI
     let dpi = window.devicePixelRatio;
 
-    //create a style object that returns width and height
+    // create a style object that returns width and height
     let style = {
         height( ) {
-            return +getComputedStyle(canvas).getPropertyValue('height').slice(0, -2);
+            return +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
         }, width( ) {
-            return +getComputedStyle(canvas).getPropertyValue('width').slice(0, -2);
+            return +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
         }
     }
     
     //set the correct attributes for a crystal clear image!
-    canvas.setAttribute( 'width', style.width( ) * dpi );
-    canvas.setAttribute( 'height', style.height( ) * dpi );
+    canvas.setAttribute( "width", style.width( ) * dpi );
+    canvas.setAttribute( "height", style.height( ) * dpi );
 }
 
+$( document ).ready( function( ) {
+    let $max_height, $max_width;
+    $max_width = canvas.width;
+    $max_height = canvas.height;
+    
+    $( window ).resize( function( ) {
+        if( canvas.height <= $max_height * 0.90 || canvas.width <= $max_width * 0.90
+            || canvas.height >= $max_height * 1.1 || canvas.width >= $max_width * 1.1 ) {
+            $max_width = canvas.width;
+            $max_height = canvas.height;
+            particles = [ ];
+        }
+    } );
+} );
+    
 function Render( ) {    
     canvas = document.getElementById( "main-canvas" );
     context = canvas.getContext( "2d" );

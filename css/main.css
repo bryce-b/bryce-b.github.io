@@ -7,14 +7,10 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
-p { font-size: 1.2em; }
-
 a {
     color: #008d72;
     text-decoration: none;
 }
-
-a:hover { text-decoration: underline; }
 
 footer {
     margin: 1vw 0 0 0;
@@ -23,6 +19,8 @@ footer {
     margin: .3vh .3vw;
 }
 
+p { font-size: 1.2em; }
+a:hover { text-decoration: underline; }
 footer a { color: #ffffff; }
 
 nav {
@@ -85,6 +83,7 @@ img.projects {
     position: absolute;
     height: 99.6vh;
     width: 98.5vw;
+    overflow: hidden;
 }
 
 .hamburger {
@@ -120,8 +119,9 @@ img.projects {
 }
 
 canvas#main-canvas {
-    height: 98.6vh;
-    width: 98vw;
+    margin: 1vh 1vw;
+    height: 100vh;
+    width: 98%;
 }
 
 .backgrounds {
@@ -133,7 +133,7 @@ canvas#main-canvas {
 }
 
 .backgrounds:hover {
-    border: 3px solid #b437b4;
+    border: 3px solid #d128d1;
 }
 
 button#projects {
