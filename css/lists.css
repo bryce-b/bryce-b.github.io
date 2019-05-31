@@ -2,7 +2,7 @@ ol { font-size: 1.2em; }
 ul.information li { display: inline; }
 ul.projects li { display: inline; }
 ul.nav li { margin: 0 1em 0 0; display: inline; }
-ul.nav li a { color: #dddddd; }
+ul.nav li a { color: #ffffff; }
 ul.main li a { color: #42fafa; }
 ul.projects li { padding: 0 0 0.4vw 0; }
 
@@ -22,7 +22,7 @@ ol.projects {
 }
 
 ol.projects li {
-    padding: 0 0 0.5vw 0;
+    padding: 0 0 1vw 0;
     color: #42fafa;
 }
 

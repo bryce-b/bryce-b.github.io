@@ -59,3 +59,26 @@
         opacity: 1;
     }
 }
+
+.color-change-2x {
+	-webkit-animation: color-change 1.5s linear infinite alternate both;
+	        animation: color-change 1.5s linear infinite alternate both;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    background: #111111;
+  }
+  100% {
+    background: #3a005c;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background: #111111;
+  }
+  100% {
+    background: #3a005c;
+  }
+}

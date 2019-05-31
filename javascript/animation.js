@@ -24,16 +24,6 @@ class Particle {
         context.closePath( );
         context.fill( );
     }
-    
-    // TODO: possibly draw a line between the particles
-    /*Link( other ) {
-        context.lineWidth = 1.3;
-        context.beginPath( );
-        context.moveTo( this.m_x, this.m_y );
-        context.lineTo( other.m_x, other.m_y );
-        context.stroke( );
-        context.closePath( );
-    }*/
 }
 
 function DrawParticles( ) {
@@ -104,7 +94,7 @@ $( document ).ready( function( ) {
         }
     } );
 } );
-    
+
 function Render( ) {    
     canvas = document.getElementById( "main-canvas" );
     context = canvas.getContext( "2d" );
