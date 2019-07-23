@@ -1,3 +1,2 @@
-# bryce-b.github.io
 ## About
-this my online portfolio for the end of the year
+Online portfolio for the end of my first year.
