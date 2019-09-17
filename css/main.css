@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 
-body {
+body, .backgrounds, button#projects {
     background-color: #222222;
-    color: #ffffff;
+    color: #eeeeee;
+}
+
+body {
     font-size: 1em;
     font-family: 'Fira Sans', sans-serif;
 }
@@ -50,15 +53,24 @@ img.projects {
 .container { padding: 1vw; }
 
 .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
 .box {
     padding: 1vh 1vw;
     margin: 0.5vh 0.5vw;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
     min-width: 2vw;
 }
@@ -66,14 +78,18 @@ img.projects {
 .fbox {
     padding: 0.5vh 0.5vw;
     margin: 0.5vh 0.5vw;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
+    -ms-flex-preferred-size: 1vw;
     flex-basis: 1vw;
 }
 
-.b1 { order: 1; }
-.b2 { order: 2; }
-.b3 { order: 3; }
+.b1 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+.b2 { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+.b3 { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
 
 .main-section {
     top: 0;
@@ -165,21 +181,16 @@ canvas#main-canvas {
 
 .backgrounds {
     width: 100%;
+    -webkit-transition: border-color 0.25s linear;
     transition: border-color 0.25s linear;
-    color: #eeeeee;
-    background-color: #222222;
     border: 3px solid transparent;
     padding: 0.3vw;
 }
 
-.backgrounds:hover {
-    border: 3px solid #d128d1;
-}
+.backgrounds:hover { border: 3px solid #d128d1; }
 
 button#projects {
     font-size: 4vh;
-    color: #eeeeee;
     border: 0;
-    background-color: #222222;
     cursor: pointer;
 }
