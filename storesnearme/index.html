@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta name="author" content="Bryce Broom"/>
+    <meta name="description" content="Find the nearest store to you. Simple and quick!"/>
+    <meta name="keywords" content="Stores near me, stores, location, near me"/>
+
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/animation.css"/>
+    <!--used for the search icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/shop.png" sizes="any"/>
+    
+
+    <title>StoresNear.me - Find the nearest store!</title>
+</head>
+
+<body>
+    <header class="flex-container">
+        <div class="box b1">StoresNear.me</div>
+        <div class="box b2">
+            <img class="header" src="images/shop.png" alt="clip art of a shop." />
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="flex-container filled">
+            <div class="fade-in-back pad">
+                <input class="slide-in-left" type="text" id="item" value="Walmart"/>
+                <button class="slide-in-right" id="button" onclick="init()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        
+        <div class="fade-in-back" id="map"></div>
+    </div>
+    
+    <script src="javascript/input.js"></script>
+    <script src="javascript/location.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtQmGLNAK-X77W_pqKzqIiJzXE_2bl7tU&libraries=places&callback=init" async defer></script>
+    
+    <footer class="flex-container">
+        <div class="box filled b1">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+        </div>
+        
+        <div class="box filled b2">
+            Last Updated: 9/26/2019
+        </div>
+        
+        <div class="box filled b3">
+            <a href="mailto:bbroom@hpsstudents.net">Email Webmaster</a><br />
+            About me: I&#39;m a 17 year old in my second year of Software and Game Development at CTC&#46;<br />
+            <a href="https://github.com/bryce-ebp">Github</a>
+            
+        </div>
+    </footer>
+</body>
+
+</html>

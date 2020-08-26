@@ -32,8 +32,13 @@ $( document ).ready( function( ) {
     $( "ol.projects li:eq(1)" ).click( function( ) { $item = 1; } );
     $( "ol.projects li:eq(2)" ).click( function( ) { $item = 2; } );
     $( "ol.projects li:eq(3)" ).click( function( ) { $item = 3; } );
+    $( "ol.projects li:eq(4)" ).click( function( ) { $item = 4; } );
+    $( "ol.projects li:eq(5)" ).click( function( ) { $item = 5; } );
+    $( "ol.projects li:eq(6)" ).click( function( ) { $item = 6; } );
+    $( "ol.projects li:eq(7)" ).click( function( ) { $item = 7; } );
     
     $( "ol.projects li" ).click( function( ) {
+        $( "ul.projects li" ).hide( );
         $( "ul.projects li" ).hide( );
         $( "ul.projects li:eq(" + $item + ")" ).slideToggle( );
         

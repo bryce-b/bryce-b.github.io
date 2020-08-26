@@ -1,0 +1,83 @@
+body {
+    background-color: #33303A;
+    color: #eeeeee;
+}
+
+.container {
+    padding: 0.2vh 0.2vw;
+    background-color: #D9C6AB;
+    color: #222222;
+}
+
+/* how seating is:
+ * columns: 1-15
+ * rows a-z
+ */
+
+.open-seat {
+    background-image: url(../media/open-seat.png);
+}
+
+.taken-seat {
+    background-image: url(../media/taken-seat.png);
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.sides {
+    display: inline;
+    min-width: 6vw;
+}
+
+.box {
+    padding: 20px;
+    margin: 3px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-preferred-size: 3in;
+    flex-basis: 3in;
+}
+
+@media only screen and (max-width: 1600px) {
+    .box {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .sides {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .box {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .box {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        padding: 5px;
+    }
+}
+

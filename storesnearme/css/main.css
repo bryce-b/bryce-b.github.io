@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+html, body {
+    width: 100%;
+    background-color: #0b032d;
+    padding: 0;
+    margin: 0;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.pad { padding: 6px; }
+input, button { font-size: 2em; }
+.filled, button { color: #ffffff; }
+input { padding: 0 6px 0 6px; }
+button:hover { cursor: pointer; }
+#map { height: 90%; }
+
+button {
+    margin: 1px;
+    border: none;
+    float: left;
+    background-color: #f67e7d;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+a {
+    color: #00ffd8; 
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+img.header {
+    max-width: 2em;
+    float: right;
+}
+
+header {
+    font-size: 4em;
+    color: #ffb997;
+}
+
+.container {
+    margin: 5px;
+    height: 100vh;
+}
+
+.filled {
+    background-color: #74546a;
+    border: 3px solid #ffb997;
+    text-shadow: 2px 2px #222222;
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.box {
+    padding: 10px;
+    margin: 5px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-preferred-size: 3in;
+    flex-basis: 3in;
+    min-width: 20px;
+}
+
+.fbox {
+    padding: 10px;
+    margin: 10px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    min-width: 20px;
+}
+
+.b1 {
+   -webkit-box-ordinal-group: 2;
+   -ms-flex-order: 1;
+   order: 1; 
+}
+
+.b2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.b3 {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+@media only screen and (max-width: 800px) {
+    header { font-size: 2.5em; }
+    
+    img.header {
+        max-width: 2em;
+        float: none;
+    }
+}

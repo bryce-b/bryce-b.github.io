@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Bryce B"/>
+    <meta name="description" content="Register to see a movie here at the Movie Theatre Theater!"/>
+    <meta name="keywords" content="Movie, Theatre, Registration, New Movies"/>
+
+    <link rel="stylesheet" href="css/main.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <title>Movie Theatre App</title>
+</head>
+<body>
+    <header>Sandler Cinema</header>
+    
+    
+    <div class="container">
+        <div id="test"></div>
+
+        <div style="display: inline; float: left; background-image: url(https://i.vgy.me/2LQ2b8.png); background-repeat: repeat-y; min-width: 20vw;" class="side"></div>
+        <div style="display: inline; float: right; background-image: url(https://i.vgy.me/2LQ2b8.png); background-repeat: repeat-y;" class="side"></div>
+        
+        <form style="min-height: 100vh; max-width: 75vw;" action="signin.php" method="post">
+            <p>
+                <label for="name">Please enter your first and last name: </label>
+                <input type="text" name="name" id="name" placeholder="Howard Ratner" required/><br />
+            </p>
+
+            <p>
+                <label style="vertical-align: top;" for="size">Number of tickets: </label>
+                <span style="vertical-align: top;" id="display"></span>
+                <input type="range" min="1" max="15" name="size" value="1" step="1" id="size"/><br />
+            </p>
+
+            <span style="vertical-align: top">Please select your movie: </span>
+            <p style="min-height: 250px;">
+                <label for="movie1"><img style="max-height: 250px; max-width: 200px; display: inline-block;" src="media/fantasy.png" alt="me"/></label>
+                <input type="radio" name="movie" value="fantasy" id="movie1" checked/>
+
+                <label for="movie2"><img style="max-height: 250px; max-width: 200px; display: inline-block;" src="media/horror.png" alt="me"/></label>
+                <input type="radio" name="movie" value="horror" id="movie2"/>
+                
+                <label for="movie3"><img style="max-height: 250px; max-width: 200px; display: inline-block;" src="media/scifi.png" alt="me"/></label>
+                <input type="radio" name="movie" value="scifi" id="movie3"/>
+                
+                <label for="movie4"><img style="max-height: 250px; max-width: 200px; display: inline-block;" src="media/western.png" alt="me"/></label>
+                <input type="radio" name="movie" value="western" id="movie4"/>
+            </p>
+
+            <p><input type="submit" value="Purchase tickets."/></p>
+        </form>
+    </div>
+    
+</body>
+</html>
